@@ -4,7 +4,6 @@ import CurrenciesSums from './components/CurrenciesSums';
 
 const URL= 'https://api.exchangeratesapi.io/latest?base=USD';
 
-const URLe='https://api.exchangeratesapi.io/latest?base=USD&symbols=';
 
 function App() {
 
@@ -12,26 +11,27 @@ function App() {
     const [convertedCurrencies, setConvertedCurrencies] = useState([]);
     const [amount, setAmount] = useState();
     const [selectedCurrency,setSelectedCurrency]=useState();
-    const [currencyOptions,setCurrencyOptions]= useState([])
+    const [currencyOptions,setCurrencyOptions]= useState([]);
+    const [exchangeRate, setExchangeRate] = useState();
+  //  const [convertedAmount,setConvertedAmount]=useState();
+
+
+    let convertedAmount=Math.round(amount/exchangeRate)
 
 //fetching data from API and storing currency rates
   useEffect(() => {    
   fetch(URL)         
    .then(request => request.json ()) 
-   .then (data => setCurrencyOptions ([...Object.keys(data.rates)]));
-
-  }, []);
-// fetching rate for selected currency
-  useEffect(() => { 
+   .then (data => {
+    setCurrencyOptions ([...Object.keys(data.rates)])
     if (selectedCurrency!=null)    {
-      fetch(URLe+selectedCurrency)         
-      .then(request => request.json ()) 
-      .then (data => (data));
-    }
     
-  
-    }, [selectedCurrency]);
-  
+      setExchangeRate(data.rates[selectedCurrency]);
+    }
+  } );
+   
+  }, [selectedCurrency]);
+
   const onInputChange = (e) => {
     
     setAmount(e.target.value) }
@@ -86,18 +86,18 @@ function App() {
          
         </select>
 
-         <button className="button">
-          Convert to USD
-        </button>
+         <button className="button">Convert to USD </button>
 
       </form>
 
-      {
+      {/* {
         convertedCurrencies.map((sum, index) => (
           <CurrenciesSums data={sum} key={index} />
-        ))
-      }
-
+        )
+        )
+      } */}
+      {!selectedCurrency && <div>Amount in USD=</div>} 
+      {selectedCurrency && <div name="sum">Amount in USD={convertedAmount} </div>}
 
     </div>
   );

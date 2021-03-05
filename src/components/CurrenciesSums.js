@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import './CurrenciesSums.css';
 
 
@@ -21,3 +21,4 @@ export default function CurrenciesSums(props) {
         </div>
     )
 }
+*/
