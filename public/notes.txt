@@ -1,0 +1,17 @@
+install fontawesome
+        
+yarn add @fortawesome/fontawesome-svg-core
+  yarn add @fortawesome/free-solid-svg-icons
+  yarn add @fortawesome/react-fontawesome
+
+
+Created new pages for styling and structure:
+PageStructure.js
+PageStructure.css 
+
+Created Header:
+App Logo: 
+//Downloaded library for icons here:https://fontawesome.com/how-to-use/on-the-web/using-with/react
+//Then import them like this:
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDragon } from '@fortawesome/free-solid-svg-icons'

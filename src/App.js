@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import CurrenciesSums from './components/CurrenciesSums';
+import PageStructure from './components/PageStructure';
+
+
 
 const URL= 'https://api.exchangeratesapi.io/latest?base=USD';
 
@@ -59,7 +62,8 @@ function App() {
 
   return (
     <div className="App">
-      
+      <PageStructure />
+
       <form className="form" onSubmit={onSubmit}>
         
         <h1>
