@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import CurrenciesSums from './components/CurrenciesSums';
+//This is your style and page structure component
+//It does not interfere with your data flow, or your App set up
 import PageStructure from './components/PageStructure';
 
 
@@ -62,6 +64,7 @@ function App() {
 
   return (
     <div className="App">
+      {/* This is your style and structure component, it will not affect your data flow or setup */}
       <PageStructure />
 
       <form className="form" onSubmit={onSubmit}>
