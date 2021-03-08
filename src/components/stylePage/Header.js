@@ -1,5 +1,7 @@
 import React from 'react'
-import './PageStructure.css'
+import './Header.css'
+
+
 
 //Downloaded library for icons here:https://fontawesome.com/how-to-use/on-the-web/using-with/react
 //Then import them like this:
@@ -22,7 +24,10 @@ export default function PageStructure () {
                     </div>
                     <div className="navbar-right-header">
                         <ul className="menu-items">
-                            
+                            <li className="menu-item">Market Tracker</li>
+                            <li className="menu-item">Market News</li>
+                            <li className="menu-item">Resources</li>
+                            <li className="menu-item">Contact Us</li>
                         </ul>
                     </div>
                 </div>

@@ -1,0 +1,43 @@
+
+
+.StockTracker {
+    text-align: center;
+    margin-top: 40%;
+}
+
+label.date {
+    display: block;
+    font-size: 20px;
+}
+
+input.date {
+  text-align: center;
+  height: 30px;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 20px;
+  border: 2px solid #000;
+}
+
+button.date {
+    height: 40px;
+  width: 120px;
+  margin-top: 30px;
+  align-self: flex-end;
+  cursor: pointer; 
+
+  border-radius: 15px;
+  border: none;
+  background-color: #8eb5e9;
+  color: #fff;
+  transition: 0.2s all;
+}
+
+button.date:focus{
+    outline: none;
+}
+  
+button.date:hover{ 
+box-shadow: 3px 3px 10px 2px rgba(0,0,0,0.62);
+}

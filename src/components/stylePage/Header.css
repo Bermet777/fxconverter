@@ -1,0 +1,81 @@
+
+Header {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+
+div.container-in-header{
+  height: 10vh;
+  border: 10px solid white;
+  margin-bottom: 0%;
+  position: relative;
+}
+
+div.navbar-container {
+  border: 4px solid darkblue;
+  height: 9vh;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 0%;
+  position: relative;
+}
+
+div.navbar-right-header{
+  display: flex;
+  height: 8.5vh;
+  width: 166.5vh;
+  margin-left: 5.3%;
+  margin-top: -6.5%;
+  margin-bottom: -2%;
+  padding: 0%;
+  border: 2px solid goldenrod;
+  position: relative;
+
+}
+
+/*applies to all menu items inside the menu bar*/
+ul.menu-items {
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 0%;
+  margin: 0%;
+  margin-right: 2%;
+  margin-left: -1.8%;
+  color: black;
+  position: relative;
+  /*gets rid of bullet points for list*/
+  list-style: none;
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 150%;
+  font-weight: bold thin;
+}
+
+/*applies to each menu item in the menu*/
+ul li.menu-item {
+  width: 42vh;
+  margin-left: 1.8%;
+  padding-top: 1.2%;
+  margin-right: 0%;
+  border: 2px solid aquamarine
+
+}
+
+
+#logo-icon {
+  display: block;
+  margin-top: 0%;
+  font-size: 350%;
+  padding: 1%;
+  width: 5.4vh;
+  height: 5.4vh;
+  margin-bottom: 1.3%;
+  border: 2px solid red;
+  position: relative;
+}
+
+.date{
+  position: center center;
+}

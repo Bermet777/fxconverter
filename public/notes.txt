@@ -15,3 +15,7 @@ App Logo:
 //Then import them like this:
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDragon } from '@fortawesome/free-solid-svg-icons'
+
+To Work on: 
+Menu: link to reference parts of page, use anchor tags to reference id tag
+Market Watch below form: https://youtu.be/9ohK7CapmIs

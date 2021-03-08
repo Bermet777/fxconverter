@@ -3,9 +3,9 @@ import './App.css';
 import CurrenciesSums from './components/CurrenciesSums';
 //This is your style and page structure component
 //It does not interfere with your data flow, or your App set up
-import PageStructure from './components/PageStructure';
-
-
+import Header from './components/stylePage/Header';
+import CurrencyTracker from './components/stylePage/CurrencyTracker'
+import Footer from './components/stylePage/Footer'
 
 const URL= 'https://api.exchangeratesapi.io/latest?base=USD';
 
@@ -64,9 +64,12 @@ function App() {
 
   return (
     <div className="App">
-      {/* This is your style and structure component, it will not affect your data flow or setup */}
-      <PageStructure />
 
+    <div className="AddPageStructure">
+        {/* This is your style and structure component, it will not affect your data flow or setup */}
+        <Header />
+      </div>
+      
       <form className="form" onSubmit={onSubmit}>
         
         <h1>
@@ -104,8 +107,15 @@ function App() {
           <CurrenciesSums data={sum} key={index} />
         ))
       }
+    
+    {/* This was added to help compliment the form */}
+    <main>
+      <CurrencyTracker className="date"/>
+    </main>
 
-
+    <footer>
+      <Footer />
+    </footer>
     </div>
   );
 }
