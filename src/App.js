@@ -66,6 +66,7 @@ function App() {
     <div className="App">
 
     <div className="AddPageStructure">
+    
         {/* This is your style and structure component, it will not affect your data flow or setup */}
         <Header />
       </div>
@@ -121,3 +122,4 @@ function App() {
 }
 
 export default App;
+

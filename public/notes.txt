@@ -19,3 +19,17 @@ import { faDragon } from '@fortawesome/free-solid-svg-icons'
 To Work on: 
 Menu: link to reference parts of page, use anchor tags to reference id tag
 Market Watch below form: https://youtu.be/9ohK7CapmIs
+
+Created interactive image for above header:
+Video Tutorial: https://youtu.be/pJJQZvS9VNI
+
+  //Installed Pixi.js 
+  https://github.com/pixijs/pixi.js
+  yarn add pixi.js
+
+  //download image:
+  https://drive.google.com/file/d/1WmwJfgzRXNIQLANgWB9J5LqujaIN65DO/view
+
+  //add Web Loade to help control linked fonts into html before </head>
+  https://github.com/typekit/webfontloader 
+
