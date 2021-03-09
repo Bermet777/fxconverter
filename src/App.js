@@ -6,6 +6,7 @@ import CurrenciesSums from './components/CurrenciesSums';
 import Header from './components/stylePage/Header';
 import CurrencyTracker from './components/stylePage/CurrencyTracker'
 import Footer from './components/stylePage/Footer'
+import { api_key2 } from './components/stylePage/apiKey'
 
 const URL= 'https://api.exchangeratesapi.io/latest?base=USD';
 
@@ -18,6 +19,67 @@ function App() {
     const [amount, setAmount] = useState();
     const [selectedCurrency,setSelectedCurrency]=useState();
     const [currencyOptions,setCurrencyOptions]= useState([])
+
+  //This is for the CurrencyTrack.js to save all dates to an array
+  const [date, setDate] = useState([])
+  const [loading, setLoading] = useState("");
+  const [error, setError] = useState("");
+
+  
+    /**********************************GET Data function********************************** */
+
+    async function getDate(date) {
+      
+      //The URL for your API, Authentication with API KEY, imported from apiKey.js file
+      let trackerUrl = `https://api.polygon.io/v2/aggs/grouped/locale/global/market/fx/${date}?unadjusted=true&apiKey=${api_key2}`;
+      
+     //check value in tackerUrl, passes
+      console.log("parent", JSON.stringify(date))
+
+      //Reset every status before sending a new fetch request
+      setLoading(true);
+      setError('');
+      setDate([]);
+
+      //delay for 500ms
+      await pause(500)
+
+      //check 
+      console.log('parent',loading, error, date)
+
+      async function pause(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      //How to send a fetch request to get data
+      //when using fetch and async, it always require a "try" and "catch" encapsulation
+      //try = sending request
+      try {
+          let response = await fetch(trackerUrl);
+          if (response.ok) {
+              //server received and understood my request, returns data in response and turns into JSON format
+              let data = await response.json()
+              //This is how we update and set the data to our requested object
+              setDate(data);
+              console.log("response", JSON.stringify(data))
+          } else {
+              //if we encounter any errors, like a server error
+              setError(`Server error: ${response.status} ${response.statusText0}`)
+          }
+          //if not a server error, it is a network error, and we want to catch this error
+      }  catch (err) {
+          //network server cannot be contacted
+          setError(`Network error: ${err.message}`);
+      }
+
+      //if nothing is sent or received, loading status returns to false before sending another request
+      setLoading(false);
+  
+  }
+
+  
+  /********************************************************************************************************* */
+
 
 //fetching data from API and storing currency rates
   useEffect(() => {    
@@ -68,7 +130,7 @@ function App() {
     <div className="AddPageStructure">
     
         {/* This is your style and structure component, it will not affect your data flow or setup */}
-        <Header />
+        <Header id="header"/>
       </div>
       
       <form className="form" onSubmit={onSubmit}>
@@ -111,9 +173,10 @@ function App() {
     
     {/* This was added to help compliment the form */}
     <main>
-      <CurrencyTracker className="date"/>
+      <CurrencyTracker date={date}  onSubmit={(d) => getDate(d)} />
     </main>
 
+      {/* This was added to give more body to the app */}
     <footer>
       <Footer />
     </footer>

@@ -30,6 +30,10 @@ Video Tutorial: https://youtu.be/pJJQZvS9VNI
   //download image:
   https://drive.google.com/file/d/1WmwJfgzRXNIQLANgWB9J5LqujaIN65DO/view
 
-  //add Web Loade to help control linked fonts into html before </head>
-  https://github.com/typekit/webfontloader 
 
+//Created Currency Tracker for future feature. API for curreny rates
+https://polygon.io/docs/get_v2_aggs_grouped_locale_global_market_fx__date__anchor
+  -The date form works, check the console. But the only issue now is to
+  find a way to access the data inside the nested arrays, so we don't show ALL data
+
+  

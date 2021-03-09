@@ -1,4 +1,4 @@
-import React from 'react'
+
 //Add your API KEY here to keep it safe when using in the URL 
 //in StockTracker.js for website https://www.alphavantage.co/
 
