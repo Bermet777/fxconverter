@@ -22,14 +22,14 @@ export default function PageStructure () {
                     <div className="icon-container">
                     <FontAwesomeIcon icon={ faDragon } id="logo-icon"/>
                     </div>
-                    <div className="navbar-right-header">
+                    <nav className="navbar-right-header">
                         <ul className="menu-items">
-                            <li className="menu-item">Market Tracker</li>
+                            <li className="menu-item">Market Tracker</li>  
                             <li className="menu-item">Market News</li>
                             <li className="menu-item">Resources</li>
                             <li className="menu-item">Contact Us</li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
             </div>
             </header>

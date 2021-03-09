@@ -10,19 +10,19 @@ import './CurrencyTracker.css'
 export default function StockTracker(props) {
 
     //check props
-    // console.log("tracker", JSON.stringify(props))
-    // console.log("tracker",Object.entries(props.date))
+    console.log("tracker", JSON.stringify(props))
+    console.log("tracker",Object.entries(props.date))
 
 
             // This works to get the value of i, but need to try to get 
             //the values of arrays nested inside
-        for (let i in props.date.results) {
-            if(i.length <=1 && i.length >=0){
-                console.log(props.date.results[i])
-                console.log(Object.values(props.date.results[i]))
+        // for (let i in props.date.results) {
+        //     if(i.length <=1 && i.length >=0){
+        //         console.log(props.date.results[i])
+        //         console.log(Object.values(props.date.results[i]))
                 
-            }
-        }
+        //     }
+        // }
 
     
 
@@ -63,11 +63,11 @@ export default function StockTracker(props) {
 
             <ul>
                 {   
-            
+                    date.results
                 }
             </ul>
 
-            <form onSubmit={handleSubmit}>
+            <form className="date" onSubmit={handleSubmit}>
                 <div className="label-date">
                 <label htmlFor="date" className="date">
                 Enter Date

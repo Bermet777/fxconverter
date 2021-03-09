@@ -1,81 +1,143 @@
 
-Header {
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-
-
 div.container-in-header{
-  height: 10vh;
+  height: 9.8vh;
+  width: 88vw;
   border: 10px solid white;
+  border-radius: 40px;
   margin-bottom: 0%;
   position: relative;
+  box-shadow: 4px 4px 4px black;
 }
 
 div.navbar-container {
-  border: 4px solid darkblue;
-  height: 9vh;
+  /* border: 4px solid darkblue; */
+  height: 9.8vh;
   margin-left: 0%;
   margin-right: 0%;
   margin-bottom: 0%;
+  background-color: darkblue;
   position: relative;
+  border-radius: 28px;
 }
 
-div.navbar-right-header{
+nav.navbar-right-header{
   display: flex;
-  height: 8.5vh;
-  width: 166.5vh;
-  margin-left: 5.3%;
-  margin-top: -6.5%;
-  margin-bottom: -2%;
+  height: 9.3vh;
+  width: 82.8vw;
+  margin-left: 5.7%;
+  margin-top: -7%;
+  margin-bottom: 0%;
   padding: 0%;
-  border: 2px solid goldenrod;
+  border: 4px solid darkgray;
+  /* background-color: grey; */
   position: relative;
+  border-radius: 32px;
 
 }
 
 /*applies to all menu items inside the menu bar*/
 ul.menu-items {
+
   justify-content: center;
   justify-items: center;
   text-align: center;
   padding: 0%;
   margin: 0%;
-  margin-right: 2%;
-  margin-left: -1.8%;
+  margin-right: 0%;
+  margin-left: -1.6%;
   color: black;
   position: relative;
   /*gets rid of bullet points for list*/
   list-style: none;
   display: flex;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 150%;
   font-weight: bold thin;
 }
 
 /*applies to each menu item in the menu*/
 ul li.menu-item {
-  width: 42vh;
-  margin-left: 1.8%;
-  padding-top: 1.2%;
+  width: 20.5vw;
+  margin-left: 2.4%;
+  padding-top: 1%;
+  padding-bottom: 3%;
   margin-right: 0%;
-  border: 2px solid aquamarine
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+  border: 3px solid darkgray;
+  background-color: darkblue;
+  border-radius: 38px;
+  color: white;
+  box-shadow: 2px 2px 2px 2px white;
+  
+  
 
 }
 
 
 #logo-icon {
   display: block;
-  margin-top: 0%;
-  font-size: 350%;
+  margin-top: 0-1%;
+  font-size: 100%;
   padding: 1%;
-  width: 5.4vh;
-  height: 5.4vh;
+  width: 5.6vh;
+  height: 5.6vh;
   margin-bottom: 1.3%;
-  border: 2px solid red;
+  border: 4px solid white;
+  background-color: darkblue;
+  box-shadow: 1px 1px 1px white;
   position: relative;
+  border-radius: 27px;
+  
+
 }
 
 .date{
   position: center center;
+}
+
+
+form.date {
+  width: 80%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  max-width: 600px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightblue;
+  box-shadow: 4px 4px 4px black;
+}
+
+
+form button.date {
+  height: 55px;
+  width: 180px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding-top:1%;
+  padding-bottom: 2%;
+  align-self: flex-end;
+  cursor: pointer; 
+  font-size: 20px;
+  justify-content: center;
+  border-radius: 15px;
+  border: none;
+  background-color: #8eb5e9;
+  color: #fff;
+  transition: 0.2s all;
+  box-shadow: 2px 2px 2px lightblue;
+}
+
+label.date {
+  padding-top: 5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 2px 2px black;
+}
+
+input.date {
+  border: 2px solid #000;
+  box-shadow: 4px 4px 4px grey;
 }

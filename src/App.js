@@ -5,7 +5,6 @@ import CurrenciesSums from './components/CurrenciesSums';
 //It does not interfere with your data flow, or your App set up
 import Header from './components/stylePage/Header';
 import CurrencyTracker from './components/stylePage/CurrencyTracker'
-import Footer from './components/stylePage/Footer'
 import { api_key2 } from './components/stylePage/apiKey'
 
 const URL= 'https://api.exchangeratesapi.io/latest?base=USD';
@@ -176,10 +175,6 @@ function App() {
       <CurrencyTracker date={date}  onSubmit={(d) => getDate(d)} />
     </main>
 
-      {/* This was added to give more body to the app */}
-    <footer>
-      <Footer />
-    </footer>
     </div>
   );
 }
